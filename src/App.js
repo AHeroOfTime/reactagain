@@ -1,6 +1,7 @@
 import React from 'react';
 import { Counter } from './Counter';
 import { Accordian } from './Accordian';
+import { Input } from './Input';
 import PropTypes from 'prop-types';
 import './App.css';
 
@@ -11,6 +12,8 @@ function App() {
         <HelloWorld name="Aaron" greeting="Yo" />
         <HelloWorld name="World" />
       </header> */}
+      <Input />
+
       <Counter />
       <Accordian />
     </div>
