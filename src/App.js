@@ -1,15 +1,18 @@
 import React from 'react';
+import { Counter } from './Counter';
+import { Accordian } from './Accordian';
 import PropTypes from 'prop-types';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <HelloWorld name="Aaron" greeting="Yo" />
         <HelloWorld name="World" />
-      </header>
+      </header> */}
+      <Counter />
+      <Accordian />
     </div>
   );
 }
