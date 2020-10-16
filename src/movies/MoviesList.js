@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Movie } from './Movie';
+import { Filter } from '../Filter';
 
 const movies = [
   {
@@ -17,17 +19,14 @@ export function MoviesList() {
 
   return (
     <div>
-      <label>
-        Filter:
-        <input onChange={(e) => setFilter(e.target.value)} value={filter} />
-      </label>
+      <Filter filter={filter} setFilter={setFilter} />
       <ul>
         {movies
           .filter((movie) =>
             movie.name.toLowerCase().includes(filter.toLowerCase()),
           )
-          .map((movies) => (
-            <li key={movies.name}>{movies.name}</li>
+          .map((movie) => (
+            <Movie key={movie.name} movie={movie} />
           ))}
       </ul>
     </div>

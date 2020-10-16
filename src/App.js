@@ -1,5 +1,5 @@
 import React from 'react';
-import { MoviesList } from './MoviesList';
+import { MoviesList } from './movies/MoviesList';
 // import { Counter } from './Counter';
 // import { Accordian } from './Accordian';
 // import { Input } from './Input';
