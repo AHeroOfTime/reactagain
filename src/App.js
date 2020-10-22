@@ -1,5 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { MoviesList } from './movies/MoviesList';
+import { MovieDetail } from './movies/MovieDetail';
 // import { Counter } from './Counter';
 // import { Accordian } from './Accordian';
 // import { Input } from './Input';
@@ -9,6 +11,16 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Switch>
+          <Route path="/details">
+            <MovieDetail />
+          </Route>
+          <Route path="/">
+            <MoviesList />
+          </Route>
+        </Switch>
+      </Router>
       {/* <header className="App-header">
         <HelloWorld name="Aaron" greeting="Yo" />
         <HelloWorld name="World" />
@@ -16,7 +28,6 @@ function App() {
       {/* <Input />
       <Counter />
       <Accordian /> */}
-      <MoviesList />
     </div>
   );
 }
