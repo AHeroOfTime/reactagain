@@ -9,7 +9,7 @@ export function Movie({ movie, config }) {
 
   return (
     <li>
-      <Link to="/details">
+      <Link to={`/movie/${movie.id}`}>
         {config.images?.base_url && (
           <img
             src={config.images.base_url + 'w342' + movie.poster_path}
@@ -24,7 +24,13 @@ export function Movie({ movie, config }) {
 
 Movie.propTypes = {
   movie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     poster_path: PropTypes.string.isRequired,
   }).isRequired,
+  config: PropTypes.shape({
+    images: PropTypes.shape({
+      base_url: PropTypes.string,
+    }),
+  }),
 };
